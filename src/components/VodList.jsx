@@ -12,7 +12,7 @@ const VodList = (props) => {
   const nav = useNavigate();
   useEffect(() => {
     isNoRes();
-    console.log(props.vod_ar.length);
+    
   }, [query.get("s")]);
 
   const menuToggle = () => {
@@ -21,9 +21,9 @@ const VodList = (props) => {
   const years = [1989, 1990, 1995, 2000, 2005, 2010, 2020, 2021, 2022, 2023];
   const isNoRes = () => {
     if (props.vod_ar.length === 0) {
-      setNoRes(true);
-    } else if (props.vod_ar.length > 0) {
       setNoRes(false);
+    } else if (props.vod_ar.length > 0) {
+      setNoRes(true);
     }
   };
   return (
