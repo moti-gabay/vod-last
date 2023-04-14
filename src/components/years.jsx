@@ -28,7 +28,7 @@ const Years = () => {
   );
 
   const doApi = async (_searchQ, year) => {
-    const url = `http://www.omdbapi.com/?s=${_searchQ}&y=${year}&apikey=6ff60cd9`;
+    const url = `https://www.omdbapi.com/?s=${_searchQ}&y=${year}&apikey=6ff60cd9`;
     const { data } = await axios.get(url);
     setAr(data.Search);
     setLoading(false);
