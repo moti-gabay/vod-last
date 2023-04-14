@@ -5,7 +5,7 @@ import axios from 'axios'
 import Header from './Header'
 
 const Home = () => {
-    const [querys] = useSearchParams();
+    const {querys} = useSearchParams();
     const [ar,setAr] = useState([]);
     const [loading,setLoading] = useState(true);
 

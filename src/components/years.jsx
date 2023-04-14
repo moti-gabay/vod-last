@@ -11,7 +11,7 @@ import VodItem from "./VodItem";
 const Years = () => {
   const [loading, setLoading] = useState(true);
   const [toggle, setToggle] = useState(false);
-  const [noRes, setNoRes] = useState(true);
+  const [noRes, setNoRes] = useState(false);
   const { year } = useParams();
   const nav = useNavigate();
   const [querys] = useSearchParams();
@@ -20,19 +20,18 @@ const Years = () => {
   useEffect(
     () => {
       let searchQ = querys.get("s") || "bank";
-      doApi(searchQ, year);
-      isNoRes()
+      doApi( year);
+      // isNoRes()
     },
     [querys.get("y")]
    
   );
 
-  const doApi = async (_searchQ, year) => {
-    const url = `https://www.omdbapi.com/?s=${_searchQ}&y=${year}&apikey=6ff60cd9`;
+  const doApi = async (year) => {
+    const url = `https://www.omdbapi.com/?s=bank&y=${year}&apikey=6ff60cd9`;
     const { data } = await axios.get(url);
     setAr(data.Search);
     setLoading(false);
-    isNoRes();
     console.log(ar);
   };
   const menuToggle = () => {
@@ -44,7 +43,7 @@ const Years = () => {
       setNoRes(true);
     }
     if (ar.length > 0) {
-      setNoRes(false);
+      setNoRes();
     }
   };
 
