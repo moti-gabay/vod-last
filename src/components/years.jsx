@@ -22,7 +22,7 @@ const Years = () => {
       let searchQ = querys.get("s") || "bank";
       doApi(searchQ, year);
       isNoRes()
-    }
+    },
     [querys.get("y")]
    
   );
