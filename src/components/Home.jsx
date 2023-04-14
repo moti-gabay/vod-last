@@ -16,7 +16,7 @@ const Home = () => {
             },[querys]);
           
     const doApi = async(_searchQ) => {
-        const url = `http://www.omdbapi.com/?s=${_searchQ}&apikey=6ff60cd9`;
+        const url = `https://www.omdbapi.com/?s=${_searchQ}&apikey=6ff60cd9`;
     const {data} = await axios.get(url);
     setAr(data.Search)
     setLoading(false)
