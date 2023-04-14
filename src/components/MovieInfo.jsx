@@ -31,7 +31,7 @@ const onEnter = (e) => {
 
   const Api = async () => {
     const {data} = await axios.get(
-      `http://www.omdbapi.com/?i=${params.id}&apikey=6ff60cd9`
+      `https://www.omdbapi.com/?i=${params.id}&apikey=6ff60cd9`
     );
     console.log(data);
     setItem(data);
