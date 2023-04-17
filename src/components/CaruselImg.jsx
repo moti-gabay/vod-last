@@ -13,7 +13,7 @@ const CaruselImg = () => {
         alt="..."
       />
       <img  className=' bg-cover bg-no-repeat object-contain '
-        src="https://images.pexels.com/photos/33129/popcorn-movie-party-entertainment.jpg?auto=compress&cs=tinysrgb&w=1600"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4xN3t9YuveGwRjsdt8UNB9YAKZso8ABeqqA&usqp=CAU"
         alt="..."
       />
     </Carousel>
